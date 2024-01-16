@@ -19,6 +19,10 @@
         inherit system;
         modules = [ ./system/desktop.nix ];
       };
+      rblade = lib.nixosSystem {
+        inherit system;
+        modules = [ ./system/rblade.nix ];
+      };
     };
     homeConfigurations = {
       desktop = home-manager.lib.homeManagerConfiguration {
