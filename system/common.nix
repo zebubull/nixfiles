@@ -85,7 +85,7 @@
     description = "Luka Kourtev";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
+      firefox-wayland
     ];
   };
 
@@ -93,14 +93,14 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
+    
+  # Make electron apps work
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
   };
 
   environment.systemPackages = with pkgs; [
-    # stuff
-    wget
+    # things and the like
     dbus
     git-credential-oauth
     
@@ -115,14 +115,23 @@
     # DE stuff
     gtk4
     wayland
-    rofi-wayland
+    xdg-desktop-portal
+    xdg-desktop-portal-hyprland
     waybar
+    
+    # app launcher
+    rofi-wayland
+
+    # notifications
     mako
+
+    # clipboard support
     cliphist
     wl-clipboard
 
-    xdg-desktop-portal
-    xdg-desktop-portal-hyprland
+    # other utilities
+    bat
+    wget
   ];
 
   programs.git = {

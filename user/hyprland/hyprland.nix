@@ -13,6 +13,7 @@
       "wl-paste --type text --watch cliphist store #Stores only text data"
       "wl-paste --type image --watch cliphist store #Stores only image data"
       # for some reason pipewire doesn't get started by default
+      # maybe it does but it didn't one time so make sure it does
       "systemctl --user restart pipewire.service"
       "systemctl --user restart pipewire-pulse.service"
       "pactl load-module module-loopback"
