@@ -132,11 +132,13 @@
     # other utilities
     bat
     wget
+    libsecret
   ];
 
   programs.git = {
     enable = true;
-    config.credential.helper = "oauth";
+    package = pkgs.gitFull;
+    config.credential.helper = "libsecret";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
