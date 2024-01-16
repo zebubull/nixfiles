@@ -29,6 +29,10 @@
         inherit pkgs;
         modules = [ ./user/desktop.nix ];
       };
+      rblade = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [ ./user/rblade.nix ];
+      };
     };
   };
 
