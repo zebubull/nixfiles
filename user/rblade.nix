@@ -4,7 +4,7 @@
   imports = [
      ./common.nix
      ./hyprland/rblade.nix
-     ./waybar/rblade..nix
+     ./waybar/rblade.nix
   ];
 
   nixpkgs.config.allowUnfree = true;

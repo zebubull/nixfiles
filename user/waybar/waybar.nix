@@ -134,13 +134,12 @@
 
     #battery {
         background-color: #c6a0f6;
-        border-radius: 0 10px 10px 0;
         color: #000000;
     }
 
     #battery.charging {
         color: #000000;
-        background-color: #0bda51;
+        background-color: #94e2d5;
     }
 
     #battery.critical:not(.charging) {
