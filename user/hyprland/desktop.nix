@@ -25,7 +25,17 @@
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "xwaylandvideobridge"
       "fcitx5"
+      "hyprctl setcursor Vimix-cursors 24"
     ];
+    decoration = {
+      blur = {
+        enabled = true;
+        size = 3;
+        passes = 1;
+      };
+
+      drop_shadow = "yes";
+    };
     env = [
       "XCURSOR_SIZE,32"
     ];

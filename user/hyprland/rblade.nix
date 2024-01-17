@@ -21,6 +21,7 @@
       "systemctl --user restart pipewire.service"
       "systemctl --user restart pipewire-pulse.service"
       "fcitx5"
+      "hyprctl setcursor Vimix-cursors 32"
     ];
     env = [
       "XCURSOR_SIZE,24"
@@ -32,6 +33,16 @@
       touchpad.natural_scroll = "no";
       sensitivity = 0.0;
       kb_options = "ctrl:nocaps";
+    };
+    decoration = {
+      blur = {
+        enabled = false;
+      };
+
+      drop_shadow = "no";
+    };
+    misc = {
+      vfr = true;
     };
   };
 }
