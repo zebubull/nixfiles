@@ -16,6 +16,7 @@
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
   home.packages = with pkgs; [
+    playerctl
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -34,7 +35,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
   };
 
   programs.fish = {
@@ -51,6 +52,17 @@
     enable = true;
     userName = "zebubull";
     userEmail = "ldkourtev@gmail.com";
+  };
+
+  gtk = {
+    enable = true;
+    cursorTheme.package = pkgs.vimix-cursors;
+    cursorTheme.name = "Vimix-cursors";
+    cursorTheme.size = 32;
+    iconTheme.package = pkgs.vimix-icon-theme;
+    iconTheme.name = "Vimix-Amethyst-dark";
+    theme.package = pkgs.vimix-gtk-themes;
+    theme.name = "vimix-dark-doder";
   };
 
   # Let Home Manager install and manage itself.
