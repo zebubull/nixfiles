@@ -20,9 +20,6 @@
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "xwaylandvideobridge"
     ];
-    env = [
-      "XCURSOR_SIZE,24"
-    ];
     input = {
       kb_layout = "us";
       follow_mouse = 0;
