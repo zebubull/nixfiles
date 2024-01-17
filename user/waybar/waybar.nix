@@ -51,6 +51,8 @@
       };
       pulseaudio = {
         format = "{volume}% 󰓃";
+        format-muted = "󰓄";
+        format-bluetooth = "{volume}% 󰦢";
       };
     };
   };
