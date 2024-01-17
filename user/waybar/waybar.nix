@@ -42,9 +42,17 @@
       battery = {
         interval = 30;
         states = {
-           critical = 15;
+          full = 100;
+          threeFour = 75;
+          half = 50;
+          critical = 25;
         };
-        format =  "{capacity}% 󰁹";
+        format-discharging-full = "{capacity}% 󰁹";
+        format-discharging-threeFour = "{capacity}% 󰂀";
+        format-discharging-half = "{capacity}% 󰁾";
+        format-discharging-critical = "{capacity}% 󰂃";
+        format-charging = "{capacity}% 󰂄";
+        tooltip = "{power} W\n{timeTo}";
       };
       backlight = {
         format = "{percent}% ";
