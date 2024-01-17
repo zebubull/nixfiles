@@ -29,5 +29,11 @@
     env = [
       "XCURSOR_SIZE,32"
     ];
+    input = {
+      kb_layout = "us";
+      follow_mouse = 0;
+      touchpad.natural_scroll = "no";
+      sensitivity = -0.1;
+    };
   };
 }

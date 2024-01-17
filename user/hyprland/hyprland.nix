@@ -7,12 +7,6 @@
 
   # This is literally the default config but with some custom colors and programs
   wayland.windowManager.hyprland.settings = {
-    input = {
-      kb_layout = "us";
-      follow_mouse = 0;
-      touchpad.natural_scroll = "no";
-      sensitivity = -0.1;
-    };
     general = {
       gaps_in = 5;
       gaps_out = 20;
