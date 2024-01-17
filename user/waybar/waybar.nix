@@ -39,6 +39,19 @@
         format-disconnected = "Disconnected ⚠";
         format-alt = "{ifname}: {ipaddr}/{cidr}";
       };
+      battery = {
+        interval = 30;
+        states = {
+           critical = 15;
+        };
+        format =  "{capacity}% 󰁹";
+      };
+      backlight = {
+        format = "{percent}% ";
+      };
+      pulseaudio = {
+        format = "{volume}% 󰓃";
+      };
     };
   };
 
@@ -89,24 +102,15 @@
         color: #000000;
     }
 
-    #mode {
-        background-color: #64727D;
-        border-bottom: 3px solid #ffffff;
-    }
-
     #clock,
     #battery,
     #cpu,
     #memory,
     #network,
-    #pulseaudio,
-    #custom-media,
     #tray,
-    #mode,
-    #idle_inhibitor,
-    #keyboard-state,
-    #temperature,
-    #mpd {
+    #backlight,
+    #pulseaudio,
+    #temperature {
         padding: 0 10px;
         color: #ffffff;
     }
@@ -117,18 +121,9 @@
         color: #000000;
     }
 
-    #keyboard-state {
-        border-radius: 10px;
-        background-color: #c6a0f6;
-    }
-
     #temperature {
         border-radius: 0 10px 10px 0;
         background-color: #c6a0f6;
-        color: #000000;
-    }
-
-    #keyboard-state > * {
         color: #000000;
     }
 
@@ -163,12 +158,10 @@
         background-color: #000000;
     }
 
-    #cpu {
-        background-color: #c6a0f6;
-        color: #000000;
-    }
-
-    #memory {
+    #cpu,
+    #memory, 
+    #backlight,
+    #pulseaudio {
         background-color: #c6a0f6;
         color: #000000;
     }
@@ -183,49 +176,8 @@
         background-color: #f53c3c;
     }
 
-    #pulseaudio {
-        background-color: #c6a0f6;
-        color: #000000;
-    }
-
-    #custom-media {
-        background-color: #66cc99;
-        color: #2a5c45;
-        min-width: 100px;
-    }
-
-    #custom-media.custom-spotify {
-        background-color: #66cc99;
-    }
-
-    #custom-media.custom-vlc {
-        background-color: #ffa000;
-    }
-
     #tray {
         background-color: transparent;
-    }
-
-    #idle_inhibitor.activated {
-        background-color: #ecf0f1;
-        color: #2d3436;
-    }
-
-    #mpd {
-        background-color: #66cc99;
-        color: #2a5c45;
-    }
-
-    #mpd.disconnected {
-        background-color: #f53c3c;
-    }
-
-    #mpd.stopped {
-        background-color: #90b1b1;
-    }
-
-    #mpd.paused {
-        background-color: #51a37a;
     }
   '';
 }

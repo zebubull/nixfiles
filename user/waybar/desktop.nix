@@ -11,6 +11,7 @@
         "network"
         "cpu"
         "memory"
+        "pulseaudio"
         "temperature"
       ];
     };

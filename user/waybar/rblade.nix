@@ -11,6 +11,8 @@
         "network"
         "cpu"
         "memory"
+        "pulseaudio"
+        "backlight"
         "battery"
         "temperature"
       ];
