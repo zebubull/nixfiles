@@ -26,6 +26,7 @@
       "xwaylandvideobridge"
       "fcitx5"
       "hyprctl setcursor Vimix-cursors 24"
+      "swww init"
     ];
     decoration = {
       blur = {

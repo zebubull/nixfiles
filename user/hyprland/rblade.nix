@@ -22,7 +22,8 @@
       "systemctl --user restart pipewire-pulse.service"
       "fcitx5"
       "hyprctl setcursor Vimix-cursors 32"
-    ];
+      "swww init"
+     ];
     env = [
       "XCURSOR_SIZE,24"
       "WLR_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0"

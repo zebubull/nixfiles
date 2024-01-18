@@ -52,7 +52,7 @@
         format-discharging-half = "{capacity}% 󰁾";
         format-discharging-critical = "{capacity}% 󰂃";
         format-charging = "{capacity}% 󰂄";
-        tooltip = "{power} W\n{timeTo}";
+        tooltip-format = "{power} W\n{timeTo}";
       };
       backlight = {
         format = "{percent}% ";

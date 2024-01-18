@@ -126,6 +126,7 @@
     xdg-desktop-portal-hyprland
     waybar
     brightnessctl
+    swww
     
     # app launcher
     rofi-wayland
