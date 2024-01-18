@@ -149,7 +149,7 @@
 
     #battery.critical:not(.charging) {
         background-color: #f53c3c;
-        color: #ffffff;
+        color: #ffffcc;
         animation-name: blink;
         animation-duration: 0.5s;
         animation-timing-function: linear;
