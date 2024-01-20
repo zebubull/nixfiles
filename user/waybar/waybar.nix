@@ -81,6 +81,14 @@
 
     #window {
       color: #c6a0f6;
+      background-color: black;
+      border: 2px solid #c6a0f6;
+      border-radius: 0 10px 10px 0;
+      padding: 0px 10px 0px 10px;
+    }
+
+    window#waybar.empty #window {
+      background-color: transparent;
     }
 
     window#waybar.hidden {
@@ -90,7 +98,7 @@
     #workspaces {
         background-color: black;
         border: 2px solid #c6a0f6;
-        border-radius: 10px;
+        border-radius: 10px 0 0 10px;
     }
 
     #workspaces button {
