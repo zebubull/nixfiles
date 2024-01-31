@@ -12,5 +12,6 @@
   home.packages = with pkgs; [
     discord
     xwaylandvideobridge
+    obs-studio
   ];
 }
