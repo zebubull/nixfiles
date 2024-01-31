@@ -37,6 +37,7 @@
       ll = "ls -l";
       la = "ls -la";
       dev = "nix develop --command fish";
+      "nix-shell" = "nix-shell --run fish";
     };
     interactiveShellInit = ''
       set fish_greeting
