@@ -49,6 +49,23 @@ function fish_prompt
         echo -n ']'
     end
 
+    function _nim_prompt_wrapper_small
+        set retc $argv[1]
+        set -l field_value $argv[2]
+
+        set_color normal
+        set_color $retc
+        echo -n '─'
+        set_color -o green
+        echo -n '['
+        set_color normal
+
+        set_color $retc
+        echo -n $field_value
+        set_color -o green
+        echo -n ']'
+    end
+
     set_color $retc
     echo -n '┬─'
     set_color -o green
@@ -106,11 +123,9 @@ function fish_prompt
 
 
     # Virtual Environment
-    set -q VIRTUAL_ENV_DISABLE_PROMPT
-    or set -g VIRTUAL_ENV_DISABLE_PROMPT true
-    set -q VIRTUAL_ENV
-    and IN_NIX_SHELL
-    and _nim_prompt_wrapper $retc V ('nix-shell')
+    if test -n "$IN_NIX_SHELL"
+        _nim_prompt_wrapper_small $retc 'nix-shell'
+    end
 
     # git
     set -l prompt_git (fish_git_prompt '%s')

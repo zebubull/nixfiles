@@ -17,6 +17,7 @@
 
   home.packages = with pkgs; [
     playerctl
+    acpi
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
