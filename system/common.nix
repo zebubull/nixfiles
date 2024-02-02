@@ -142,6 +142,8 @@
     bat
     wget
     libsecret
+
+    (import ./zigup.nix)
   ];
 
   programs.git = {

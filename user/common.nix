@@ -44,6 +44,7 @@
     };
     interactiveShellInit = ''
       set fish_greeting
+      fzf_configure_bindings --variables=\ce
     '';
   };
 
