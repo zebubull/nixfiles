@@ -42,10 +42,6 @@
       dev = "nix develop --command fish";
       "nix-shell" = "nix-shell --run fish";
     };
-    interactiveShellInit = ''
-      set fish_greeting
-      fzf_configure_bindings --variables=\ce
-    '';
   };
 
   programs.git = {

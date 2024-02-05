@@ -93,9 +93,6 @@ function fish_prompt
     set_color -o green
     echo -n ']'
 
-    # Date
-    _nim_prompt_wrapper $retc '' (date +%X)
-
     # Vi-mode
     # The default mode prompt would be prefixed, which ruins our alignment.
     function fish_mode_prompt

@@ -176,4 +176,6 @@
   system.stateVersion = "23.11"; # Did you read the comment?
   
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  environment.localBinInPath = true;
 }
