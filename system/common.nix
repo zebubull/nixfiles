@@ -142,6 +142,7 @@
     bat
     wget
     libsecret
+    xplr
   ];
 
   programs.git = {
