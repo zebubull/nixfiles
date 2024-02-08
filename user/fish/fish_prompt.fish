@@ -4,7 +4,7 @@
 
 function fish_prompt
     # This prompt shows:
-    # - green lines if the last return command is OK, red otherwise
+    # - $defc lines if the last return command is OK, red otherwise
     # - your user name, in red if root or yellow otherwise
     # - your hostname, in cyan if ssh or blue otherwise
     # - the current path (with prompt_pwd)
@@ -24,8 +24,16 @@ function fish_prompt
     # │ 1    15048    0%    arrêtée    sleep 100000
     # ╰─>$ echo there
 
-    set -l retc red
-    test $status = 0; and set retc green
+    set -l last_status $status
+   if test -n "$IN_NIX_SHELL"
+        set retc yellow
+        set defc blue
+    else
+        set retc red
+        set defc purple
+    end
+
+    test $last_status = 0; and set retc $defc
 
     set -q __fish_git_prompt_showupstream
     or set -g __fish_git_prompt_showupstream auto
@@ -38,14 +46,14 @@ function fish_prompt
         set_color normal
         set_color $retc
         echo -n '─'
-        set_color -o green
+        set_color -o $defc
         echo -n '['
         set_color normal
         test -n $field_name
         and echo -n $field_name:
         set_color $retc
         echo -n $field_value
-        set_color -o green
+        set_color -o $defc
         echo -n ']'
     end
 
@@ -56,19 +64,19 @@ function fish_prompt
         set_color normal
         set_color $retc
         echo -n '─'
-        set_color -o green
+        set_color -o $defc
         echo -n '['
         set_color normal
 
         set_color $retc
         echo -n $field_value
-        set_color -o green
+        set_color -o $defc
         echo -n ']'
     end
 
     set_color $retc
     echo -n '┬─'
-    set_color -o green
+    set_color -o $defc
     echo -n [
 
     if functions -q fish_is_root_user; and fish_is_root_user
@@ -90,7 +98,7 @@ function fish_prompt
     echo -n (prompt_hostname)
     set_color -o white
     echo -n :(prompt_pwd)
-    set_color -o green
+    set_color -o $defc
     echo -n ']'
 
     # Vi-mode
@@ -105,9 +113,9 @@ function fish_prompt
             case default
                 set mode (set_color --bold red)N
             case insert
-                set mode (set_color --bold green)I
+                set mode (set_color --bold $defc)I
             case replace_one
-                set mode (set_color --bold green)R
+                set mode (set_color --bold $defc)R
                 echo '[R]'
             case replace
                 set mode (set_color --bold cyan)R
@@ -133,6 +141,11 @@ function fish_prompt
     type -q acpi
     and test (acpi -a 2> /dev/null | string match -r off)
     and _nim_prompt_wrapper $retc B (acpi -b | cut -d' ' -f 4-)
+
+    # Return code
+    if test $last_status -ne 0
+        _nim_prompt_wrapper_small $retc $last_status
+    end
 
     # New line
     echo
