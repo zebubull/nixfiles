@@ -18,5 +18,6 @@
   programs.fish.interactiveShellInit = ''
       set fish_greeting
       fzf_configure_bindings --variables=\ce
+      export ANDROID_SDK_ROOT=/home/zebubull/Android/Sdk
     '';
 }

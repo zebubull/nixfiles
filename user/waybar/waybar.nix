@@ -22,7 +22,7 @@
         format-alt = "{:%I:%M %p}";
       };
       cpu = {
-        format = "{usage}% ";
+        format = "{usage}% ";
       };
       memory = {
         format = "{}% ";
@@ -109,10 +109,13 @@
 
     #workspaces button:hover {
         box-shadow: inherit;
+        color: #a9dceb;
     }
 
-    #workspaces button.focused {
-        color: #ffffff;
+    #workspaces button.active {
+        background-color: #666666;
+        color: #c6a0f6;
+        border-radius: 10px;
     }
 
     #workspaces button.urgent {
