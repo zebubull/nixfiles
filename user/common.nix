@@ -15,13 +15,18 @@
   # release notes.
   home.stateVersion = "23.11"; # Please read the comment before changing.
 
-  home.packages = with pkgs; [
-    playerctl
-    acpi
-    fzf
-    fishPlugins.fzf-fish
-    fd
-  ];
+  home.packages =
+  let
+    flake-init = pkgs.writeScriptBin "mkflake" (builtins.readFile ./fish/mkflake.fish);
+  in with pkgs; [
+      playerctl
+      acpi
+      fzf
+      fishPlugins.fzf-fish
+      fd
+
+      flake-init
+    ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
