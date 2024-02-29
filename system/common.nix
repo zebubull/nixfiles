@@ -28,6 +28,7 @@
   fonts.packages = with pkgs; [
     font-awesome
     (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+    noto-fonts-cjk-sans
   ];
 
   # Configure network proxy if necessary

@@ -28,6 +28,8 @@
         format = "{}% ";
       };
       temperature = {
+        thermal-zone = 2;
+        hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
         critical-threshold = 80;
         format = "{temperatureF}° ";
       };
@@ -68,7 +70,7 @@
   programs.waybar.style = ''
     * {
         border: none;
-        font-family: Cousine  Nerd Font;
+        font-family: Cousine Nerd Font;
         font-size: 15px;
     }
 
