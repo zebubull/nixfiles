@@ -26,7 +26,11 @@
       fd
 
       flake-init
-      thefuck
+
+      lua-language-server
+      zls
+      rust-analyzer
+      jdt-language-server
     ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
