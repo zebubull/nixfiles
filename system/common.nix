@@ -139,6 +139,7 @@
     waybar
     brightnessctl
     swaylock-effects
+    swayidle
     swww
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
