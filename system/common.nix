@@ -24,6 +24,15 @@
     enable = true;
     xwayland.enable = true;
   };
+    
+  services.xserver.enable = true;
+  services.xserver.displayManager.sddm = {
+    enable = true;
+    wayland = {
+        enable = true;
+    };
+    theme = "${import ./pkgs/sddm-theme.nix {inherit pkgs; }}";
+  };
 
   fonts.packages = with pkgs; [
     font-awesome
@@ -128,6 +137,8 @@
     waybar
     brightnessctl
     swww
+    libsForQt5.qt5.qtquickcontrols2
+    libsForQt5.qt5.qtgraphicaleffects
     
     # app launcher
     rofi-wayland

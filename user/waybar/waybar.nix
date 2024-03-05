@@ -27,12 +27,6 @@
       memory = {
         format = "{}% ";
       };
-      temperature = {
-        thermal-zone = 2;
-        hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
-        critical-threshold = 80;
-        format = "{temperatureF}° ";
-      };
       network = {
         format-wifi = "{essid} ({signalStrength}%) ";
         format-ethernet = "{ipaddr}/{cidr} ";
@@ -132,8 +126,7 @@
     #network,
     #tray,
     #backlight,
-    #pulseaudio,
-    #temperature {
+    #pulseaudio {
         padding: 0 10px;
         color: #ffffff;
     }
@@ -144,15 +137,10 @@
         color: #000000;
     }
 
-    #temperature {
-        border-radius: 0 10px 10px 0;
-        background-color: #c6a0f6;
-        color: #000000;
-    }
-
     #battery {
         background-color: #c6a0f6;
         color: #000000;
+        border-radius: 0 10px 10px 0;
     }
 
     #battery.charging {

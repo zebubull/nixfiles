@@ -14,7 +14,6 @@
         "pulseaudio"
         "backlight"
         "battery"
-        "temperature"
       ];
     };
   };
