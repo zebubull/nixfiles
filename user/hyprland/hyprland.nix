@@ -84,6 +84,10 @@
 
       ", XF86AudioPlay, exec, playerctl play-pause"
       ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_SINK@ toggle"
+
+      # lock screen
+      #"$mainMod SHIFT, l, exec, swaylock -f --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-bur 7x5 --ring-color 584678 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 0 --fade-in 0.2"
+      "$mainMod SHIFT, l, exec, swalock -f"
     ]
     ++ (
       # workspace bindings

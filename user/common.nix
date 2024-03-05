@@ -40,7 +40,6 @@
   # plain files is through 'home.file'.
   home.file = {
     ".config/fish/functions/fish_prompt.fish".source = fish/fish_prompt.fish;
-    ".config/fish/functions/fuck.fish".source = fish/fuck.fish;
   };
 
   home.sessionVariables = {

@@ -34,6 +34,8 @@
     theme = "${import ./pkgs/sddm-theme.nix {inherit pkgs; }}";
   };
 
+  security.pam.services.swaylock = {};
+
   fonts.packages = with pkgs; [
     font-awesome
     (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
@@ -136,6 +138,7 @@
     xdg-desktop-portal-hyprland
     waybar
     brightnessctl
+    swaylock-effects
     swww
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
