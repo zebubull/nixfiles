@@ -12,6 +12,7 @@
   programs.fish.enable = true;
 
   hardware.opengl.enable = true;
+  hardware.opengl.driSupport32Bit = true;
 
   services.dbus.enable = true;
   xdg.portal = {
