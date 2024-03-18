@@ -107,8 +107,6 @@
     ];
   };
 
-  services.xserver.displayManager.gdm.enable = false;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
     
@@ -120,7 +118,6 @@
   environment.systemPackages = with pkgs; [
     # things and the like
     dbus
-    git-credential-oauth
     
     # editor
     neovim
@@ -158,13 +155,18 @@
     wget
     libsecret
     xplr
+    ripgrep
   ];
 
   programs.git = {
     enable = true;
     package = pkgs.gitFull;
-    config.credential.helper = "libsecret";
+    config = {
+        credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
+    };
   };
+
+  programs.steam.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
