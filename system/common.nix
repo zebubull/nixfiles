@@ -25,14 +25,13 @@
     xwayland.enable = true;
   };
     
-  services.xserver.enable = true;
-  services.xserver.displayManager.sddm = {
-    enable = true;
-    wayland = {
-        enable = true;
-    };
-    theme = "${import ./pkgs/sddm-theme.nix {inherit pkgs; }}";
-  };
+  # services.xserver.displayManager.sddm = {
+  #   enable = true;
+  #   wayland = {
+  #       enable = true;
+  #   };
+  #   theme = "${import ./pkgs/sddm-theme.nix {inherit pkgs; }}";
+  # };
 
   security.pam.services.swaylock = {};
 
