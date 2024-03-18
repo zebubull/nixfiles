@@ -5,7 +5,6 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   environment.shells = with pkgs; [ fish ];

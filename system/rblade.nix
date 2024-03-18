@@ -17,5 +17,7 @@
   # Enable bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+
+  networking.hostName = "the-goblin-shack"; # Define your hostname.
 }
 
