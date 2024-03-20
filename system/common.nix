@@ -8,6 +8,16 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   environment.shells = with pkgs; [ fish ];
+  environment.etc = {
+    "xdg/gtk-2.0/gtkrc".text = "gtk-application-prefer-dark-theme=1";
+    "xdg/gtk-3.0/settings.ini".text = ''
+    [Settings]
+    gtk-application-prefer-dark-theme=1'';
+    "xdg/gtk-4.0/settings.ini".text = ''
+    [Settings]
+    gtk-application-prefer-dark-theme=1'';
+  };
+
   users.users.zebubull.shell = pkgs.fish;
   programs.fish.enable = true;
 
@@ -156,6 +166,8 @@
     libsecret
     xplr
     ripgrep
+    musescore
+    muse-sounds-manager
   ];
 
   programs.git = {
