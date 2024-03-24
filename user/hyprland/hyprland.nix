@@ -23,8 +23,7 @@
       "col.shadow" = "rgba(1a1a1aee)";
 
       active_opacity = 0.995;
-      inactive_opacity = 0.95;
-      fullscreen_opacity = 1.00;
+      inactive_opacity = 0.80; fullscreen_opacity = 1.00;
     };
     animations = {
       enabled = "yes";
@@ -53,6 +52,8 @@
     };
     windowrulev2 = [
       "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"
+      "opacity 1.0 override 1.0 override,title:(.*)(Mozilla Firefox)$"
+      "opacity 1.0 override 1.0 override,title:(.*)(- Discord)$"
       "noanim,class:^(xwaylandvideobridge)$"
       "nofocus,class:^(xwaylandvideobridge)$"
       "noinitialfocus,class:^(xwaylandvideobridge)$"
