@@ -11,6 +11,6 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.useOSProber = true;
 
-  networking.hostName = "nixos";
+  networking.hostName = "goblin-city";
 }
 

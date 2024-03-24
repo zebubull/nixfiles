@@ -12,7 +12,6 @@
         "cpu"
         "memory"
         "pulseaudio"
-        "temperature"
       ];
     };
   };
