@@ -6,7 +6,7 @@
     settings = {
       font_family = "JetBrains Mono";
       show_hyperlink_targets = true;
-      background_opacity = 0.8;
+      background_opacity = "0.8";
 
       tab_bar_edge = "top";
       tab_bar_align = "left";
