@@ -10,7 +10,7 @@
 
       tab_bar_edge = "top";
       tab_bar_align = "left";
-      tab_bar_min_tabs = 1;
+      tab_bar_min_tabs = 2;
 
       tab_bar_style = "powerline";
       tab_activity_symbol = "!";
