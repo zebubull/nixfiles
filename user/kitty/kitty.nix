@@ -18,7 +18,7 @@
     };
     keybindings = {
       "kitty_mod+t" = "new_tab";
-      "tab" = "next_tab";
+      "shift+tab" = "next_tab";
       "ctrl+tab" = "previous_tab";
       "kitty_mod+q" = "close_tab";
 
