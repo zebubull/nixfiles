@@ -2,7 +2,7 @@
 {
   programs.kitty = {
     enable = true;
-    theme = "Nord";
+    theme = "Rosé Pine Moon";
     settings = {
       font_family = "JetBrains Mono";
       show_hyperlink_targets = true;
