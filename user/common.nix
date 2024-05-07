@@ -65,6 +65,9 @@
     enable = true;
     userName = "zebubull";
     userEmail = "ldkourtev@gmail.com";
+    aliases = {
+      ls = "log --oneline --decorate --all --graph";
+    };
   };
 
   gtk = {

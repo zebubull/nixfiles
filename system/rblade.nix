@@ -6,7 +6,7 @@
        ./common.nix
       ../hardware/rblade.nix
     ];
-    
+
   # Bootloader stuff
   boot.loader.grub.enable = true;
   boot.loader.grub.useOSProber = true;
@@ -19,5 +19,29 @@
   hardware.bluetooth.powerOnBoot = true;
 
   networking.hostName = "the-goblin-shack"; # Define your hostname.
-}
 
+  services.xserver.videoDrivers = ["nvidia"];
+
+  # I hate NVIDIA
+  hardware.nvidia = {
+    modesetting.enable = true;
+
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    powerManagement.enable = true;
+    powerManagement.finegrained = true;
+    open = false;
+
+    nvidiaSettings = true;
+
+    prime = {
+      nvidiaBusId = "PCI:1:0:0";
+      intelBusId = "PCI:0:2:0";
+
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+    };
+  };
+}

@@ -2,7 +2,7 @@
 
 {
   programs.waybar.enable = true;
-  
+
   programs.waybar.settings = {
     mainBar = {
       layer = "top";
@@ -30,10 +30,9 @@
       network = {
         format-wifi = "{essid} ({signalStrength}%) ";
         format-ethernet = "{ipaddr}/{cidr} ";
-        tooltip-format = "{ifname} via {gwaddr} ";
+        tooltip-format = "{ifname} via {gwaddr} \nup: {bandwidthUpBytes}\ndown: {bandwidthDownBytes}";
         format-linked = "{ifname} (No IP) ";
         format-disconnected = "Disconnected ⚠";
-        format-alt = "{ifname}: {ipaddr}/{cidr}";
       };
       battery = {
         interval = 30;
@@ -69,16 +68,16 @@
     }
 
     window#waybar {
-        background-color: rgba(43, 48, 59, 0);
+        background-color: rgba(57, 53, 82, 0);
         transition-property: background-color;
         transition-duration: .5s;
         opacity: 0.75;
     }
 
     #window {
-      color: #c6a0f6;
-      background-color: black;
-      border: 2px solid #c6a0f6;
+      color: #e0def4;
+      background-color: #232136;
+      border: 2px solid #eb6f92;
       border-radius: 0 10px 10px 0;
       padding: 0px 10px 0px 10px;
     }
@@ -92,30 +91,29 @@
     }
 
     #workspaces {
-        background-color: black;
-        border: 2px solid #c6a0f6;
+        background-color: #232136;
+        border: 2px solid #eb6f92;
         border-radius: 10px 0 0 10px;
     }
 
     #workspaces button {
         padding: 0 5px;
         background-color: transparent;
-        color: #8a8a8a;
+        color: #908caa;
     }
 
     #workspaces button:hover {
         box-shadow: inherit;
-        color: #a9dceb;
+        color: #eb6f92;
     }
 
     #workspaces button.active {
-        background-color: #666666;
-        color: #c6a0f6;
+        color: #e0def4;
         border-radius: 10px;
     }
 
     #workspaces button.urgent {
-        background-color: #c6a0f6;
+        background-color: #eb6f92;
         color: #000000;
     }
 
@@ -133,23 +131,23 @@
 
     #clock {
         border-radius: 10px;
-        background-color: #c6a0f6;
+        background-color: #eb6f92;
         color: #000000;
     }
 
     #battery {
-        background-color: #c6a0f6;
+        background-color: #eb6f92;
         color: #000000;
         border-radius: 0 10px 10px 0;
     }
 
     #battery.charging {
         color: #000000;
-        background-color: #94e2d5;
+        background-color: #f6c177;
     }
 
     #battery.critical:not(.charging) {
-        background-color: #f53c3c;
+        background-color: #ea9a97;
         color: #ffffcc;
         animation-name: blink;
         animation-duration: 0.5s;
@@ -170,21 +168,21 @@
     }
 
     #cpu,
-    #memory, 
+    #memory,
     #backlight,
     #pulseaudio {
-        background-color: #c6a0f6;
+        background-color: #eb6f92;
         color: #000000;
     }
 
     #network {
-        background-color: #c6a0f6;
+        background-color: #eb6f92;
         border-radius: 10px 0 0 10px;
         color: #000000;
     }
 
     #network.disconnected {
-        background-color: #f53c3c;
+        background-color: #3e8fb0;
     }
 
     #tray {

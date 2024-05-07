@@ -11,8 +11,8 @@
       gaps_in = 5;
       gaps_out = 20;
       border_size = 4;
-      "col.active_border" = "rgba(c6a0f6ee) rgba(8aadf4ee) 45deg";
-      "col.inactive_border" = "rgba(94e2d5aa) rgba(89dcebaa) 45deg";
+      "col.active_border" = "rgba(eb6f92ee) rgba(ea9a97ee) 45deg";
+      "col.inactive_border" = "rgba(f6c177aa) rgba(3e8fb0aa) 45deg";
       layout = "dwindle";
       allow_tearing = false;
     };
@@ -75,7 +75,7 @@
       "$mainMod, R, exec, rofi -show drun"
       "$mainMod SHIFT, J, togglesplit,"
       "$mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
-      
+
       # vim-style focus changing
       "$mainMod, h, movefocus, l"
       "$mainMod, j, movefocus, d"
@@ -87,6 +87,7 @@
 
       # lock screen
       "$mainMod SHIFT,L,exec,swaylock --screenshots --clock --indicator --indicator-radius 100 --indicator-thickness 7 --effect-blur 7x5 --ring-color 584678 --key-hl-color 880033 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 0 --fade-in 0.2"
+      "$mainMod SHIFT, s, exec, grim -g \"$(slurp -d)\" - | wl-copy"
     ]
     ++ (
       # workspace bindings
