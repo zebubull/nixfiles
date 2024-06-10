@@ -34,10 +34,15 @@
       flake-init
 
       lua-language-server
-      zls
       rust-analyzer
       jdt-language-server
       nil
+      lxqt.lxqt-policykit
+
+      jdk21
+      prismlauncher
+      gnome.nautilus
+      discord
     ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -5,7 +5,7 @@
   imports = [
     ./hyprland.nix
   ];
-  
+
   # set monitors
   wayland.windowManager.hyprland.settings = {
     monitor = [
@@ -27,6 +27,7 @@
       "fcitx5"
       "hyprctl setcursor Vimix-cursors 24"
       "swww init"
+      "lxqt-policykit-agent"
     ];
     decoration = {
       blur = {

@@ -22,6 +22,7 @@
   programs.fish.enable = true;
 
   hardware.opengl.enable = true;
+  hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
 
   services.dbus.enable = true;
@@ -34,6 +35,8 @@
     enable = true;
     xwayland.enable = true;
   };
+
+  programs.partition-manager.enable = true;
 
   # services.xserver.displayManager.sddm = {
   #   enable = true;
