@@ -13,7 +13,6 @@
     "HDMI-A-1,3840x2160@60,2560x0,1.50"
     ];
     exec-once = [
-      "waybar"
       "mako"
       "wl-paste --type text --watch cliphist store #Stores only text data"
       "wl-paste --type image --watch cliphist store #Stores only image data"

@@ -28,6 +28,9 @@
       fzf
       fishPlugins.fzf-fish
       fd
+      hyprpicker
+      mpc-cli
+      ncmpc
 
       neofetch
 
@@ -38,6 +41,13 @@
       rust-analyzer
       jdt-language-server
       nil
+
+      # for the dashboard
+      python3
+      python311Packages.imaplib2
+      procps
+      jq
+      socat
     ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

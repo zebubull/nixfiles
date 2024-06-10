@@ -75,6 +75,8 @@
       "$mainMod, R, exec, rofi -show drun"
       "$mainMod SHIFT, J, togglesplit,"
       "$mainMod, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+      # TODO: put this in nixfiles
+      "$mainMod, F, exec, /home/zebubull/.config/eww/dashboard/launch_dashboard"
       
       # vim-style focus changing
       "$mainMod, h, movefocus, l"

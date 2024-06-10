@@ -113,6 +113,25 @@
     #media-session.enable = true;
   };
 
+  services.mpd = {
+    enable = true;
+    musicDirectory = "/home/zebubull/Music";
+    extraConfig = ''
+      audio_output {
+        type "pipewire"
+        name "PipeWire Output"
+      }
+      '';
+
+    # Optional:
+    startWhenNeeded = true; # systemd feature: only start MPD service upon connection to its socket
+    user = "zebubull";
+  };
+
+  systemd.services.mpd.environment = {
+    XDG_RUNTIME_DIR = "/run/user/1000";
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
@@ -152,6 +171,7 @@
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     waybar
+    eww-wayland
     brightnessctl
     swaylock-effects
     swayidle
