@@ -20,8 +20,11 @@ run_eww() {
 if [[ ! -f "$FILE" ]]; then
 	touch "$FILE"
     # remove old search data
-    rm $CFG/scripts/data.txt
 	run_eww
+    eww -c $HOME/.config/eww/music_player update valid=false
+    eww -c $HOME/.config/eww/music_player update title=""
+    eww -c $HOME/.config/eww/music_player update album=""
+    eww -c $HOME/.config/eww/music_player update artist=""
 else
 	${EWW} --config "$CFG" close music
 	rm "$FILE"

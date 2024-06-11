@@ -30,34 +30,39 @@
       fd
       hyprpicker
       mpc-cli
-      ncmpc
+      # doesn't work for some reason
+      # ncmpc 
 
       neofetch
-
-      flake-init
-
+    
+      # lsp
       lua-language-server
       rust-analyzer
       jdt-language-server
       nil
 
-      # for the dashboard
+      # for the eww dashboard
       python3
       python311Packages.imaplib2
       procps
       jq
       socat
-
-      jdk21
+      
+      # minecraft
       prismlauncher
+      jdk21
       gnome.nautilus
       protonup
+  
+      # custom flake script
+      flake-init
     ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
     ".config/fish/functions/fish_prompt.fish".source = fish/fish_prompt.fish;
+    # recursively load eww widgets
     ".config/eww" = {
       source = ../eww;
       recursive = true;

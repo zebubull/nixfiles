@@ -215,9 +215,13 @@ scale trough {
   border-radius: 5pt;
 }
 
-.shuffle, .repeat {
+.shuffle, .repeat, .single {
   color: #8FBCBB;
   font-size: 24pt;
+}
+
+.on {
+    font-weight: bold;
 }
 
 /** Weather ***************************************/
@@ -409,4 +413,3 @@ scale trough {
 }
 
 /** EOF *************************************************/
-

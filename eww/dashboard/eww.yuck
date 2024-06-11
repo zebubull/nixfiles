@@ -141,12 +141,14 @@
               (volum)
               (button :class "shuffle ${shuffle}" :onclick `mpc random` "${shuffle == "on" ? "󰒟" : "󰒞"}")
               (button :class "repeat ${repeat}" :onclick `mpc repeat` "${repeat == "on" ? "󰑖" : "󰑗"}")
+              (button :class "single ${single}" :onclick `mpc single` "󰑘")
                   (button :class "shuffle" :onclick `mpc seek -00:00:10` "󰴪")
                   (button :class "shuffle" :onclick `mpc seek +00:00:10` "󰵱"))
         )))
 
 (defpoll shuffle :interval "1s" `mpc status | grep --color=never "random" | awk '{ print $6}'`)
 (defpoll repeat :interval "1s" `mpc status | grep --color=never "repeat" | awk '{ print $4}'`)
+(defpoll single :interval "1s" `mpc status | grep --color=never "repeat" | awk '{ print $8}'`)
 (defpoll SONG_PROGRESS :interval "1s" `mpc | grep --color=never "playing" | awk '{print $3}'`)
 
 ;; github
