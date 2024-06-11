@@ -9,7 +9,11 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  home.packages = with pkgs; [
+  home.packages =
+  let
+    offload = pkgs.writeScriptBin "offload" (builtins.readFile ./fish/offload.fish);
+  in [
+    offload
   ];
 
   programs.fish.interactiveShellInit = ''

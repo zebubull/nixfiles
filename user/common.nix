@@ -37,7 +37,6 @@
       flake-init
 
       lua-language-server
-      zls
       rust-analyzer
       jdt-language-server
       nil
@@ -48,6 +47,10 @@
       procps
       jq
       socat
+
+      jdk21
+      prismlauncher
+      gnome.nautilus
     ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -75,6 +78,9 @@
     enable = true;
     userName = "zebubull";
     userEmail = "ldkourtev@gmail.com";
+    aliases = {
+      ls = "log --oneline --decorate --all --graph";
+    };
   };
 
   gtk = {

@@ -22,6 +22,7 @@
   programs.fish.enable = true;
 
   hardware.opengl.enable = true;
+  hardware.opengl.driSupport = true;
   hardware.opengl.driSupport32Bit = true;
 
   services.dbus.enable = true;
@@ -34,7 +35,9 @@
     enable = true;
     xwayland.enable = true;
   };
-    
+
+  programs.partition-manager.enable = true;
+
   # services.xserver.displayManager.sddm = {
   #   enable = true;
   #   wayland = {
@@ -147,16 +150,15 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-    
+
   # Make electron apps work
   environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
   };
 
   environment.systemPackages = with pkgs; [
     # things and the like
     dbus
-    
+
     # editor
     neovim
     kitty
@@ -164,7 +166,7 @@
     # sound
     pulseaudio
     pulsemixer
-    
+
     # DE stuff
     gtk4
     wayland
@@ -178,7 +180,7 @@
     swww
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtgraphicaleffects
-    
+
     # app launcher
     rofi-wayland
 
@@ -197,6 +199,11 @@
     ripgrep
     musescore
     muse-sounds-manager
+    gimp
+    qimgv
+
+    grim
+    slurp
   ];
 
   programs.git = {
@@ -233,7 +240,7 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
-  
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.localBinInPath = true;
