@@ -1,0 +1,53 @@
+* {
+    all: unset;
+    font-family: Cousine Nerd Font;
+    font-size: 32px;
+}
+
+.music {
+    background-color: #272D39;
+    border-radius: 16pt;
+    padding: 8px;
+}
+
+.search-bar {
+    margin: 0px 16px 0px 16px;
+    color: #D46389;
+}
+
+.search-bar.found {
+    color: #8FBCBB;
+}
+
+.close-button {
+    font-weight: bold;
+    margin-left: 4px;
+    margin-right: 8px;
+    color: #D46389;
+}
+
+.search-label {
+    font-weight: bold;
+    margin-right: 4px;
+    margin-left: 8px;
+    color: #8FBCBB;
+}
+
+.title-label {
+    margin-top: 8px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #8FBCBB;
+}
+
+.album-label {
+    font-size: 24px;
+    font-weight: bold;
+	color: #B48EAD;
+}
+
+.artist-label {
+    font-size: 24px;
+	color: #EBCB8B;
+    margin-bottom: 8px;
+}

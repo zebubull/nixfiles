@@ -1,0 +1,28 @@
+(defvar valid false)
+(defvar title "")
+(defvar album "")
+(defvar artist "")
+(defwidget search []
+    (box :orientation "v" :class "player-win"
+      (box :orientation "h" :space-evenly false :class "search-win"
+        (label :class "search-label" :text "")
+        (input :class "search-bar ${valid ? "found" : ""}" :onchange "./scripts/check \"{}\"" :onaccept "./scripts/launch {}" :hexpand true)
+        (button :class "close-button" :onclick "./launch_player" ""))
+      (label :class "title-label" :text title :limit-width 40)
+      (label :class "album-label" :text album :limit-width 20)
+      (label :class "artist-label" :text artist :limit-width 20)
+      ))
+
+(defwindow music
+  :monitor 0
+  :geometry (geometry
+    :x "0"
+    :y "0"
+    :height "64px"
+    :width "20%"
+    :anchor "center")
+  :exclusive false
+  :focusable true
+  :stacking "fg"
+  (search))
+

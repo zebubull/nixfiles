@@ -47,5 +47,9 @@
       touchpad.natural_scroll = "no";
       sensitivity = -0.1;
     };
+    workspace = [
+      "1,monitor:1,default:true"
+      "2,monitor:0,default:true"
+    ];
   };
 }

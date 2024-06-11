@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ -z $1 ]; then
+    eww -c $HOME/.config/eww/music_player update valid=false
+    eww -c $HOME/.config/eww/music_player update title=""
+    eww -c $HOME/.config/eww/music_player update album=""
+    eww -c $HOME/.config/eww/music_player update artist=""
+    exit 0
+fi
+
+SONG=$(mpc search any "$1" | sed 1q)
+if [[ $SONG ]]; then
+    mpc insert "$SONG"
+    mpc next
+    $HOME/.config/eww/music_player/launch_player
+fi

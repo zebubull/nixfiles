@@ -1,0 +1,25 @@
+#!/bin/bash
+if [ -z $1 ]; then
+    eww -c $HOME/.config/eww/music_player update valid=false
+    eww -c $HOME/.config/eww/music_player update title=""
+    eww -c $HOME/.config/eww/music_player update album=""
+    eww -c $HOME/.config/eww/music_player update artist=""
+    exit 0
+fi
+
+SONG=$(mpc search any "$1" | sed 1q)
+if [[ $SONG ]]; then
+    ffprobe "$HOME/Music/$SONG" 2> scripts/data.txt
+    TITLE=$(grep "title" scripts/data.txt | awk '{$1=$2=""; print $0}' | sed -z 's/^[[:space:]]*//' | sed 1q)
+    ALBUM=$(grep "album" scripts/data.txt | awk '{$1=$2=""; print $0}' | sed -z 's/^[[:space:]]*//' | sed 1q)
+    ARTIST=$(grep "artist" scripts/data.txt | awk '{$1=$2=""; print $0}' | sed -z 's/^[[:space:]]*//' | sed 1q)
+    eww -c $HOME/.config/eww/music_player update valid=true
+    eww -c $HOME/.config/eww/music_player update title="$TITLE"
+    eww -c $HOME/.config/eww/music_player update album="$ALBUM"
+    eww -c $HOME/.config/eww/music_player update artist="$ARTIST"
+else
+    eww -c $HOME/.config/eww/music_player update valid=false
+    eww -c $HOME/.config/eww/music_player update title=""
+    eww -c $HOME/.config/eww/music_player update album=""
+    eww -c $HOME/.config/eww/music_player update artist=""
+fi
