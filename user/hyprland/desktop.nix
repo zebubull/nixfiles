@@ -9,8 +9,8 @@
   # set monitors
   wayland.windowManager.hyprland.settings = {
     monitor = [
-    "DP-1, 3840x2160@60,0x0,1.50"
-    "HDMI-A-1,3840x2160@60,2560x0,1.50"
+    "DP-3,3840x2160@60,3840x0,1.0"
+    "HDMI-A-1,3840x2160@60,0x0,1.0"
     ];
     exec-once = [
       "mako"
@@ -27,6 +27,7 @@
       "hyprctl setcursor Vimix-cursors 24"
       "swww init"
       "lxqt-policykit-agent"
+      "/home/zebubull/.config/eww/bar/launch_bar"
     ];
     decoration = {
       blur = {

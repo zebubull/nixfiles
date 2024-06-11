@@ -4,7 +4,6 @@
     enable = true;
     theme = "Rosé Pine Moon";
     settings = {
-      font_family = "JetBrains Mono";
       show_hyperlink_targets = true;
       background_opacity = "0.8";
 
@@ -16,6 +15,8 @@
       tab_activity_symbol = "!";
       tab_title_template = "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{title} {num_windows}";
     };
+    font.name = "JetBrains Mono";
+    font.size = 16;
     keybindings = {
       "kitty_mod+t" = "new_tab";
       "ctrl+tab" = "next_tab";

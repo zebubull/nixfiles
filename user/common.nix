@@ -51,12 +51,17 @@
       jdk21
       prismlauncher
       gnome.nautilus
+      protonup
     ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
     ".config/fish/functions/fish_prompt.fish".source = fish/fish_prompt.fish;
+    ".config/eww" = {
+      source = ../eww;
+      recursive = true;
+    };
   };
 
   home.sessionVariables = {

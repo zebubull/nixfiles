@@ -95,7 +95,7 @@
 
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
     openFirewall = true;
   };
 
@@ -173,7 +173,7 @@
     xdg-desktop-portal
     xdg-desktop-portal-hyprland
     waybar
-    eww-wayland
+    eww
     brightnessctl
     swaylock-effects
     swayidle
@@ -204,6 +204,7 @@
 
     grim
     slurp
+    ffmpeg
   ];
 
   programs.git = {
@@ -215,6 +216,8 @@
   };
 
   programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
