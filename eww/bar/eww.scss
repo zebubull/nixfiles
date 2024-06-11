@@ -5,47 +5,52 @@
 
 .sidebar {
     background-color: #272D39;
-    border-radius: 32px;
+    border-radius: 32pt;
     color: #D46389;
 }
 
 .ws {
-    margin: 4px;
-    font-size: 16px;
-    min-width: 24px;
-    min-height: 24px;
+    margin: 4pt;
+    font-size: 16pt;
+    min-width: 24pt;
+    min-height: 24pt;
     border-radius: 50%;
-    background-color: rgba(67, 63, 62, 1);
+    background-color: rgba(57, 53, 82, 0.9);
+    padding-top: 2pt;
 }
 
 .ws.empty {
     background-color: rgba(57, 53, 82, 0.0);
 }
 
+.ws.current {
+    background-color: rgba(67, 63, 62, 1.0);
+}
+
 .botbar {
     background-color: #272D39;
-    border-radius: 16px;
+    border-radius: 16pt;
 }
 
 .volume-icon{
   margin: .2rem 0 .2rem 0;
-  font-size: 16px;
-  min-width: 24px;
-  min-height: 24px;
-  margin: 4px;
+  font-size: 16pt;
+  min-width: 24pt;
+  min-height: 24pt;
+  margin: 4pt;
   color: #8FBCBB;
 }
 
 scale trough {
   all: unset;
   background-color: #1E2430;
-  border-radius: 5px;
-  min-height: 80px;
-  min-width: 10px;
+  border-radius: 5pt;
+  min-height: 80pt;
+  min-width: 10pt;
   margin: 1rem 0 .3rem 0;
 }
 
 .volbar trough highlight {
   background-color: #8FBCBB;
-  border-radius: 5px;
+  border-radius: 5pt;
 }
