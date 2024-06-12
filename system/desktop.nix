@@ -12,5 +12,6 @@
   boot.loader.grub.useOSProber = true;
 
   networking.hostName = "goblin-city";
+  programs.corectrl.enable = true;
 }
 

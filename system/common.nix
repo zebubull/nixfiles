@@ -187,6 +187,7 @@
     swayidle
     swww
     eww
+    lxqt.lxqt-policykit
 
     # app launcher
     rofi-wayland

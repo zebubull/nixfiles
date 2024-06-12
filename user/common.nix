@@ -22,6 +22,7 @@
   home.packages =
   let
     flake-init = pkgs.writeScriptBin "mkflake" (builtins.readFile ./fish/mkflake.fish);
+    patch-script = pkgs.writeScriptBin "patch-exec" (builtins.readFile ./fish/patch-exec.fish);
   in with pkgs; [
       playerctl
       acpi
@@ -30,6 +31,7 @@
       fd
       hyprpicker
       mpc-cli
+      gnome.nautilus
       # doesn't work for some reason
       # ncmpc 
 
@@ -51,11 +53,13 @@
       # minecraft
       prismlauncher
       jdk21
-      gnome.nautilus
-      protonup
+
+      # tModLoader 1.4.4 is broken without this
+      dotnet-runtime_8
   
       # custom flake script
       flake-init
+      patch-script
     ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

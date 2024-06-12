@@ -9,8 +9,8 @@
   # set monitors
   wayland.windowManager.hyprland.settings = {
     monitor = [
-    "DP-3,3840x2160@60,3840x0,1.0"
-    "HDMI-A-1,3840x2160@60,0x0,1.0"
+    "DP-2,3840x2160@60,3840x0,1.0"
+    "DP-3,3840x2160@60,0x0,1.0"
     ];
     exec-once = [
       "mako"
