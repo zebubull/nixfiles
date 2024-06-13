@@ -3,7 +3,7 @@
     font-family: Cousine Nerd Font;
 }
 
-.sidebar {
+.container {
     background-color: #272D39;
     border-radius: 32pt;
     color: #D46389;
@@ -33,12 +33,21 @@
 }
 
 .volume-icon{
-  margin: .2rem 0 .2rem 0;
+  margin: 0rem 0 .2rem 0;
   font-size: 16pt;
   min-width: 24pt;
   min-height: 24pt;
   margin: 4pt;
   color: #8FBCBB;
+}
+
+.bness-icon {
+  margin: .2rem 0 .2rem 0;
+  font-size: 16pt;
+  min-width: 24pt;
+  min-height: 24pt;
+  margin: 4pt;
+  color: #EBCB8B;
 }
 
 scale trough {
@@ -52,5 +61,10 @@ scale trough {
 
 .volbar trough highlight {
   background-color: #8FBCBB;
+  border-radius: 5pt;
+}
+
+.bbar trough highlight {
+  background-color: #EBCB8B;
   border-radius: 5pt;
 }

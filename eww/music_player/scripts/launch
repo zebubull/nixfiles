@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z $1 ]; then
+if [ -z "$1" ]; then
     eww -c $HOME/.config/eww/music_player update valid=false
     eww -c $HOME/.config/eww/music_player update title=""
     eww -c $HOME/.config/eww/music_player update album=""

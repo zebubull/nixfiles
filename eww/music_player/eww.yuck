@@ -6,7 +6,7 @@
     (box :orientation "v" :class "player-win"
       (box :orientation "h" :space-evenly false :class "search-win"
         (label :class "search-label" :text "")
-        (input :class "search-bar ${valid ? "found" : ""}" :onchange "./scripts/check \"{}\"" :onaccept "./scripts/launch {}" :hexpand true)
+        (input :class "search-bar ${valid ? "found" : ""}" :onchange "./scripts/check \"{}\"" :onaccept "./scripts/launch \"{}\"" :hexpand true)
         (button :class "close-button" :onclick "./launch_player" ""))
       (label :class "title-label" :text title :limit-width 40)
       (label :class "album-label" :text album :limit-width 20)

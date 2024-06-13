@@ -80,6 +80,25 @@
 
   security.pam.services.swaylock = {};
 
+  systemd.timers."weather-info" = {
+    wantedBy = [ "timers.target" ];
+    timerConfig = {
+      OnBootSec = "1s";
+      OnUnitActiveSec = "15m";
+      Unit = "dashboard-weather-info.service";
+    };
+  };
+
+  systemd.services."dashboard-weather-info" = {
+    script = ''
+      ${pkgs.fish}/bin/fish -l -c '/home/zebubull/.config/eww/dashboard/scripts/weather_info --getdata'
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+      User = "zebubull";
+    };
+  };
+
   #
   # Desktop
   #

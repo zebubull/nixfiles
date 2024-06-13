@@ -59,6 +59,9 @@
   
       # custom flake script
       flake-init
+
+      # for patching
+      patchelf
       patch-script
     ];
 

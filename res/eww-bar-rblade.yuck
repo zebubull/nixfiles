@@ -17,45 +17,61 @@
 
 ;; Volume Widgets ;;
 (defwidget volum []
-	(eventbox :onhover "${eww} update volum=true"
+	(eventbox :onhover "${eww} update volum=true" 		
 			  :onhoverlost "${eww} update volum=false"
-	(box      :orientation "v"
-			  :space-evenly "false"
+              :valign "end"
+	(box      :orientation "v" 	  
+			  :space-evenly "false" 
 			  :spacing "2"
-	(revealer :transition "slideup"
-			  :reveal volum
+	(revealer :transition "slideup" 
+			  :reveal volum         
 			  :duration "550ms"
-	(scale    :class "volbar"
-			  :value current-volume
-			  :orientation "v"
-			  :flipped true
-			  :max 105
-			  :min 0
+	(scale    :class "volbar" 	  
+			  :value current-volume 
+			  :orientation "v"      
+			  :flipped true 
+			  :max 105 
+			  :min 0 
 			  :onchange "amixer -D pipewire sset Master {}%" ))
 	(button :class "volume-icon" ""))))
+
 (defpoll current-volume :interval "1s" "amixer -D pipewire sget Master | grep 'Left:' | awk -F'[][]' '{ print $2 }' | tr -d '%'")
 (defvar volum false)
 
+(defwidget bness []
+	(eventbox :onhover "${eww} update bness=true" 		
+			  :onhoverlost "${eww} update bness=false"
+	(box      :orientation "v" 	  
+			  :space-evenly "false" 
+			  :spacing "2"
+	(revealer :transition "slideup" 
+			  :reveal bness
+			  :duration "550ms"
+	(scale    :class "bbar" 	  
+			  :value current-bness 
+			  :orientation "v"      
+			  :flipped true 
+			  :max 100
+			  :min 0 
+			  :onchange "brightnessctl s {}%" ))
+	(button :class "bness-icon" ""))))
+
+(defpoll current-bness :interval "1s" `scripts/bness`)
+(defvar bness false)
+
+(defwidget center [] 
+  (box :class "container" (workspaces)))
+
+(defwidget bottom [] 
+  (box :space-evenly false :class "container" :valign "end" :orientation "v" (bness) (volum)))
+
 (defwindow sidebar
-  :monitor 0 :geometry (geometry
+  :monitor 0 :geometry (geometry 
     :x "8px"
-    :height "20%"
+    :height "90%"
     :width "32px"
     :anchor "center left")
   :exclusive true
   :focusable false
   :stacking "fg"
-  (workspaces))
-
-(defwindow botbar
-  :monitor 0
-  :geometry (geometry
-    :x "-32px"
-    :height "32px"
-    :y "5%"
-    :width "32px"
-    :anchor "bottom left")
-  :exclusive true
-  :focusable false
-  :stacking "fg"
-  (volum))
+  (centerbox :orientation "v" (box) (center) (bottom)))
