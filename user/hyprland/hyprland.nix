@@ -48,7 +48,7 @@
       workspace_swipe = "off";
     };
     misc = {
-      force_default_wallpaper = 0;
+      force_default_wallpaper = 2;
     };
     windowrulev2 = [
       "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"

@@ -71,6 +71,7 @@
     };
     ".config/mako/config".source = ./mako.config;
     ".config/mpd-notification.conf".source = ./mpd-notif.config;
+    ".local/bin/swww-randomize".source = ./swww-randomize;
   };
 
   home.sessionVariables = {
