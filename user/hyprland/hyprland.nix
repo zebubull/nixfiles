@@ -80,6 +80,7 @@
       "$mainMod, F, exec, /home/zebubull/.config/eww/dashboard/launch_dashboard"
       "$mainMod, P, exec, /home/zebubull/.config/eww/music_player/launch_player"
       "$mainMod, S, exec, /home/zebubull/.config/eww/bar/launch_bar"
+      "$mainMod SHIFT, E, exec, pkill eww"
       # vim-style focus changing
       "$mainMod, h, movefocus, l"
       "$mainMod, j, movefocus, d"
