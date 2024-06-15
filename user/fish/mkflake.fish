@@ -1,7 +1,7 @@
 echo "{"
 echo "  inputs ="
 echo "  {"
-echo "    nixpkgs.url = \"github:nixos/nixpkgs/nixos-23.11\";"
+echo "    nixpkgs.url = \"github:nixos/nixpkgs/nixos-24.05\";"
 echo "  };"
 echo "  outputs =  { self, nixpkgs, ... }:"
 echo "  let"

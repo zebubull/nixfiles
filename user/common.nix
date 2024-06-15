@@ -31,17 +31,12 @@
       fd
       hyprpicker
       mpc-cli
+      mpd-notification
       gnome.nautilus
       # doesn't work for some reason
       # ncmpc 
 
       neofetch
-    
-      # lsp
-      lua-language-server
-      rust-analyzer
-      jdt-language-server
-      nil
 
       # for the eww dashboard
       python3
@@ -74,6 +69,8 @@
       source = ../eww;
       recursive = true;
     };
+    ".config/mako/config".source = ./mako.config;
+    ".config/mpd-notification.conf".source = ./mpd-notif.config;
   };
 
   home.sessionVariables = {
@@ -99,6 +96,8 @@
       ls = "log --oneline --decorate --all --graph";
     };
   };
+
+  services.mpd-discord-rpc.enable = true;
 
   gtk = {
     enable = true;

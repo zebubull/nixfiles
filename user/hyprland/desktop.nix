@@ -14,6 +14,7 @@
     ];
     exec-once = [
       "mako"
+      "mpd-notification"
       "wl-paste --type text --watch cliphist store #Stores only text data"
       "wl-paste --type image --watch cliphist store #Stores only image data"
       # for some reason pipewire doesn't get started by default
