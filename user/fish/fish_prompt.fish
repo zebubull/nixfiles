@@ -26,11 +26,11 @@ function fish_prompt
 
     set -l last_status $status
    if test -n "$IN_NIX_SHELL"
-        set retc f6c177
-        set defc 3e8fb0
+        set retc magenta
+        set defc cyan
     else
-        set retc ea9a97
-        set defc eb6f92
+        set retc red
+        set defc green
     end
 
     test $last_status = 0; and set retc $defc

@@ -11,8 +11,8 @@
       gaps_in = 5;
       gaps_out = 20;
       border_size = 4;
-      "col.active_border" = "rgba(eb6f92ee) rgba(ea9a97ee) 45deg";
-      "col.inactive_border" = "rgba(f6c177aa) rgba(3e8fb0aa) 45deg";
+      "col.active_border" = "rgba(1CD1ABee) rgba(1e997eee) 45deg";
+      "col.inactive_border" = "rgba(A3D3D3aa) rgba(#C6C1BDaa) 45deg";
       layout = "dwindle";
       allow_tearing = false;
     };
@@ -20,7 +20,7 @@
       rounding = 10;
       shadow_range = 4;
       shadow_render_power = 3;
-      "col.shadow" = "rgba(1a1a1aee)";
+      "col.shadow" = "rgba(30383Eee)";
 
       active_opacity = 0.995;
       inactive_opacity = 0.80; fullscreen_opacity = 1.00;

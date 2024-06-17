@@ -1,12 +1,23 @@
+$bg: #30383E;
+$bg-light: #5B454D;
+
+$text: #E8FAED;
+
+$fg-1: #1CD1AB;
+$fg-2: #5DAF9F;
+
+$accent-1: #C84D4F;
+$accent-2: #C7DC82;
+
 * {
     all: unset;
     font-family: Cousine Nerd Font;
 }
 
 .container {
-    background-color: #272D39;
+    background-color: $bg;
     border-radius: 32pt;
-    color: #D46389;
+    color: $text;
 }
 
 .ws {
@@ -15,20 +26,20 @@
     min-width: 24pt;
     min-height: 24pt;
     border-radius: 50%;
-    background-color: rgba(57, 53, 82, 0.9);
+    background-color: $bg-light;
     padding-top: 2pt;
 }
 
 .ws.empty {
-    background-color: rgba(57, 53, 82, 0.0);
+    color: $bg;
 }
 
 .ws.current {
-    background-color: rgba(67, 63, 62, 1.0);
+    background-color: $bg;
 }
 
 .botbar {
-    background-color: #272D39;
+    background-color: $bg;
     border-radius: 16pt;
 }
 
@@ -38,7 +49,7 @@
   min-width: 24pt;
   min-height: 24pt;
   margin: 4pt;
-  color: #8FBCBB;
+  color: $fg-1;
 }
 
 .bness-icon {
@@ -47,12 +58,12 @@
   min-width: 24pt;
   min-height: 24pt;
   margin: 4pt;
-  color: #EBCB8B;
+  color: $accent-2;
 }
 
 scale trough {
   all: unset;
-  background-color: #1E2430;
+  background-color: $bg-light;
   border-radius: 5pt;
   min-height: 80pt;
   min-width: 10pt;
@@ -60,11 +71,11 @@ scale trough {
 }
 
 .volbar trough highlight {
-  background-color: #8FBCBB;
+  background-color: $fg-1;
   border-radius: 5pt;
 }
 
 .bbar trough highlight {
-  background-color: #EBCB8B;
+  background-color: $accent-2;
   border-radius: 5pt;
 }

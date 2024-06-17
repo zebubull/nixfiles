@@ -142,8 +142,8 @@
               (button :class "shuffle ${shuffle}" :onclick `mpc random` "${shuffle == "on" ? "󰒟" : "󰒞"}")
               (button :class "repeat ${repeat}" :onclick `mpc repeat` "${repeat == "on" ? "󰑖" : "󰑗"}")
               (button :class "single ${single}" :onclick `mpc single` "󰑘")
-                  (button :class "shuffle" :onclick `mpc seek -00:00:10` "󰴪")
-                  (button :class "shuffle" :onclick `mpc seek +00:00:10` "󰵱"))
+                  (button :class "ff" :onclick `mpc seek -00:00:10` "󰴪")
+                  (button :class "rw" :onclick `mpc seek +00:00:10` "󰵱"))
         )))
 
 (defpoll shuffle :interval "1s" `mpc status | grep --color=never "random" | awk '{ print $6}'`)

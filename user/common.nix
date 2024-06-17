@@ -58,6 +58,9 @@
       # for patching
       patchelf
       patch-script
+
+      # lsp cuz I'm lazy
+      nil
     ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -72,6 +75,8 @@
     ".config/mako/config".source = ./mako.config;
     ".config/mpd-notification.conf".source = ./mpd-notif.config;
     ".local/bin/swww-randomize".source = ./swww-randomize;
+    ".config/nvim".source = ../nvim;
+    ".config/nvim-scheme".source = ../nvim-scheme;
   };
 
   home.sessionVariables = {
@@ -85,7 +90,7 @@
       ll = "ls -l";
       la = "ls -la";
       dev = "nix develop --command fish";
-      "nix-shell" = "nix-shell --run fish";
+      "shell" = "nix-shell --run fish -p";
     };
   };
 

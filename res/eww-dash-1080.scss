@@ -1,3 +1,14 @@
+$bg: #30383E;
+$bg-light: #5B454D;
+
+$text: #E8FAED;
+
+$fg-1: #1CD1AB;
+$fg-2: #5DAF9F;
+
+$accent-1: #C84D4F;
+$accent-2: #C7DC82;
+
 /** Global *******************************************/
 *{
 	all: unset;
@@ -8,13 +19,13 @@
 .bg {
 	background-image: url("images/bg.png");
     background-size: 100%;
-	background-color: #474D59;
+	background-color: $bg;
 	opacity: 1;
 }
 
 /** Generic window ***********************************/
 .genwin {
-	background-color: #2E3440;
+	background-color: $bg;
 	border-radius: 16px;
 }
 
@@ -28,13 +39,13 @@
 }
 
 .fullname {
-	color: #D46389;
+	color: $accent-1;
 	font-size : 30px;
 	font-weight : bold;
 }
 
 .username {
-	color: #8FBCBB;
+	color: $fg-1;
 	font-size : 22px;
 	font-weight : bold;
 	margin : -15px 0px 0px 0px;
@@ -46,16 +57,16 @@
 	font-weight : normal;
 }
 .iconcpu {
-	color: #BF616A;
+	color: $accent-1;
 }
 .iconmem {
-	color: #A3BE8C;
+	color: $fg-2;
 }
 .iconbright {
-	color: #EBCB8B;
+	color: $accent-2;
 }
 .iconbat {
-	color: #88C0D0;
+	color: $fg-1;
 }
 
 .cpu_bar, .mem_bar, .bright_bar, .bat_bar, scale trough {
@@ -72,21 +83,21 @@
 }
 
 .cpu_bar scale trough highlight {
-	background-color: #BF616A;
+	background-color: $accent-1;
 }
 .mem_bar scale trough highlight {
-	background-color: #A3BE8C;
+	background-color: $fg-2;
 }
 .bright_bar scale trough highlight {
-	background-color: #EBCB8B;
+	background-color: $accent-2;
 }
 .bat_bar scale trough highlight {
-	background-color: #88C0D0;
+	background-color: $fg-1;
 }
 
 /** Clock ********************************************/
 .time_hour, .time_min {
-	color: #81A1C1;
+	color: $text;
 	font-size : 40px;
 	font-weight : bold;
 }
@@ -98,14 +109,14 @@
 }
 
 .time_mer {
-	color: #A3BE8C;
+	color: $fg-2;
 	font-size : 30px;
 	font-weight : bold;
 	margin : 20px 0px 0px 0px;
 }
 
 .time_day {
-	color: #EBCB8B;
+	color: $accent-2;
 	font-size : 20px;
 	font-weight : normal;
 	margin : 0px 0px 20px -20px;
@@ -113,19 +124,19 @@
 
 /** Upxime ********************************************/
 .icontimer {
-	color: #B48EAD;
+	color: $accent-1;
 	font-size : 76px;
 	font-weight : normal;
 }
 
 .uphour {
-	color: #E5E9F0;
+	color: $text;
 	font-size : 32px;
 	font-weight : bold;
 }
 
 .upmin {
-	color: #E5E9F0;
+	color: $text;
 	font-size : 24px;
 	font-weight : bold;
 }
@@ -141,14 +152,14 @@
 }
 
 .song {
-	color: #8FBCBB;
+	color: $fg-1;
 	font-size : 24px;
 	font-weight : bold;
 	margin : 10px 0px 0px 0px;
 }
 
 .artist {
-	color: #EBCB8B;
+	color: $accent-2;
 	font-size : 16px;
 	font-weight : normal;
 	margin : 0px 0px 5px 0px;
@@ -158,29 +169,29 @@
 	font-family: Cousine Nerd Fond;
 }
 .btn_prev {
-	color: #EBCB8B;
+	color: $accent-2;
 	font-size : 32px;
 	font-weight : normal;
 }
 .btn_play {
-	color: #A3BE8C;
+	color: $fg-2;
 	font-size : 48px;
 	font-weight : bold;
 }
 .btn_next {
-	color: #EBCB8B;
+	color: $accent-2;
 	font-size : 32px;
 	font-weight : normal;
 }
 
 .music_bar scale trough highlight {
 	all: unset;
-	background-color: #B48EAD;
+	background-color: $accent-2;
 	border-radius: 8px;
 }
 .music_bar scale trough {
 	all: unset;
-	background-color: #3A404C;
+	background-color: $bg-light;
 	border-radius: 8px;
 	min-height: 20px;
 	min-width: 310px;
@@ -188,7 +199,7 @@
 }
 
 .song_progress {
-	color: #B48EAD;
+    color: $accent-1;
     font-size: 16px;
 }
 
@@ -198,12 +209,12 @@
   min-width: 24px;
   min-height: 24px;
   margin: 4px;
-  color: #8FBCBB;
+  color: $fg-1;
 }
 
 scale trough {
   all: unset;
-  background-color: #1E2430;
+  background-color: #bg-light;
   border-radius: 5px;
   min-height: 10px;
   min-width: 80px;
@@ -211,12 +222,12 @@ scale trough {
 }
 
 .volbar trough highlight {
-  background-color: #8FBCBB;
+  background-color: #fg-light;
   border-radius: 5px;
 }
 
-.shuffle, .repeat, .single {
-  color: #8FBCBB;
+.shuffle, .repeat, .single, .ff, .rw {
+  color: $fg-1;
   font-size: 24px;
 }
 
@@ -233,20 +244,20 @@ scale trough {
 }
 
 .label_temp {
-	color : #A6D1DD;
+	color : $accent-2;
 	font-size : 80px;
 	font-weight : bold;
 	margin : -15px 30px 0px 0px;
 }
 
 .label_stat {
-	color : #BF616A;
+	color : $accent-1;
 	font-size : 38px;
 	font-weight : bold;
 }
 
 .label_quote {
-	color : #E5E5E5;
+	color : $text;
 	font-size : 18px;
 	font-weight : normal;
 }
@@ -277,43 +288,27 @@ scale trough {
 
 /** Links ***************************************/
 .iconweb, .iconmail {
-	color: #FFFFFF;
+	color: $text;
 	font-family: Cousine Nerd Font;
 	font-size : 70px;
 	font-weight : normal;
 }
 .iconmail {
-	color: #DF584E;
+	color: $text;
 }
 
-.github {
-	background-color: #24292E;
-	border-radius: 16px;
-}
-.reddit {
-	background-color: #E46231;
-	border-radius: 16px;
-}
-.stackoverflow {
-	background-color: #E7700D;
-	border-radius: 16px;
-}
-.youtube {
-	background-color: #DF584E;
-	border-radius: 16px;
-}
-.mail {
-	background-color: #FFFFFF;
+.github, .reddit, .stackoverflow, .youtube, .mail {
+	background-color: $bg;
 	border-radius: 16px;
 }
 
 .mailbox {
-	background-color: #E5E5E5;
+	background-color: $bg-light;
 	border-radius: 10px;
 	margin: 48px 0px 48px 0px;
 }
 .label_mails {
-	color: #404040;
+	color: $text;
 	font-size : 32px;
 	font-weight : bold;
 	margin: 0px 12px 0px 12px;
@@ -326,39 +321,39 @@ scale trough {
 }
 
 .btn_logout {
-	color: #BF616A;
+	color: $accent-1;
 }
 .btn_sleep {
-	color: #A3BE8C;
+	color: $fg-2;
 }
 .btn_reboot {
-	color: #EBCB8B;
+	color: $accent-2;
 }
 .btn_poweroff {
-	color: #88C0D0;
+	color: $fg-1;
 }
 
 /** Home folders ***************************************/
 .hddbox {
-	background-color: #3A404C;
+	background-color: $bg-light;
 	border-radius: 10px;
 	margin : 15px;
 }
 .hddicon {
-	color: #81A1C1;
+	color: $accent-1;
 	font-family: Cousine Nerd Font;
 	font-size : 70px;
 	font-weight : normal;
 	margin : 25px 20px 25px 40px;
 }
 .hdd_label {
-	color: #E5E9F0;
+	color: $fg-1;
 	font-size : 48px;
 	font-weight : bold;
 	margin : 0px 0px 0px 15px;
 }
 .fs_sep {
-	color: #2E3440;
+	color: $bg;
 	font-size : 36px;
 	font-weight : bold;
 }
@@ -369,23 +364,24 @@ scale trough {
 	font-weight : normal;
 	margin : 0px 0px 0px 75px;
 }
+
 .iconfolder1 {
-	color: #BF616A;
+	color: $accent-1;
 }
 .iconfolder2 {
-	color: #A3BE8C;
+	color: $fg-2;
 }
 .iconfolder3 {
-	color: #EBCB8B;
+	color: $accent-2;
 }
 .iconfolder4 {
-	color: #81A1C1;
+	color: $fg-1;
 }
 .iconfolder5 {
-	color: #B48EAD;
+	color: $accent-1;
 }
 .iconfolder6 {
-	color: #88C0D0;
+	color: $fg-2;
 }
 
 .label_folder1, .label_folder2, .label_folder3, .label_folder4, .label_folder5, .label_folder6  {
@@ -393,23 +389,24 @@ scale trough {
 	font-weight : normal;
 	margin : 0px 0px 0px 30px;
 }
+
 .label_folder1 {
-	color: #BF616A;
+	color: $accent-1;
 }
 .label_folder2 {
-	color: #A3BE8C;
+	color: $fg-2;
 }
 .label_folder3 {
-	color: #EBCB8B;
+	color: $accent-2;
 }
 .label_folder4 {
-	color: #81A1C1;
+	color: $fg-1;
 }
 .label_folder5 {
-	color: #B48EAD;
+	color: $accent-1;
 }
 .label_folder6 {
-	color: #88C0D0;
+	color: $fg-2;
 }
 
 /** EOF *************************************************/

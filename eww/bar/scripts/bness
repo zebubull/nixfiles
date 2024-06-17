@@ -2,5 +2,5 @@
 
 MAX=$(brightnessctl -m m)
 CUR=$(brightnessctl -m g)
-PCT=$(($CUR / $MAX * 100))
+PCT=$(($CUR * 100 / $MAX))
 echo $PCT

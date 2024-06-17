@@ -1,3 +1,14 @@
+$bg: #30383E;
+$bg-light: #5B454D;
+
+$text: #E8FAED;
+
+$fg-1: #1CD1AB;
+$fg-2: #5DAF9F;
+
+$accent-1: #C84D4F;
+$accent-2: #C7DC82;
+
 * {
     all: unset;
     font-family: Cousine Nerd Font;
@@ -5,49 +16,49 @@
 }
 
 .music {
-    background-color: #272D39;
+    background-color: $bg;
     border-radius: 16pt;
     padding: 8px;
 }
 
 .search-bar {
     margin: 0px 16px 0px 16px;
-    color: #D46389;
+    color: $accent-1;
 }
 
 .search-bar.found {
-    color: #8FBCBB;
+    color: $text;
 }
 
 .close-button {
     font-weight: bold;
     margin-left: 4px;
     margin-right: 8px;
-    color: #D46389;
+    color: $fg-1;
 }
 
 .search-label {
     font-weight: bold;
     margin-right: 4px;
     margin-left: 8px;
-    color: #8FBCBB;
+    color: $fg-1;
 }
 
 .title-label {
     margin-top: 8px;
     font-size: 32px;
     font-weight: bold;
-    color: #8FBCBB;
+    color: $fg-1;
 }
 
 .album-label {
     font-size: 24px;
     font-weight: bold;
-	color: #B48EAD;
+	color: $fg-2;
 }
 
 .artist-label {
     font-size: 24px;
-	color: #EBCB8B;
+	color: $accent-2;
     margin-bottom: 8px;
 }
