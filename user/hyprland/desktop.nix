@@ -29,7 +29,6 @@
       "swww-daemon"
       "lxqt-policykit-agent"
       "/home/zebubull/.config/eww/bar/launch_bar"
-      "/home/zebubull/.local/bin/swww-randomize /home/zebubull/background"
     ];
     decoration = {
       blur = {

@@ -76,7 +76,7 @@ local theme = lush(function(injected_functions)
     CursorLineNr   { LineNr }, -- Like LineNr when 'cursorline' or 'relativenumber' is set for the cursor line.
     CursorLineFold { LineNr, bg = gray.da(40) }, -- Like FoldColumn when 'cursorline' is set for the cursor line
     CursorLineSign { CursorLineFold }, -- Like SignColumn when 'cursorline' is set for the cursor line
-    MatchParen     { bg = text, fg = dark_bg }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
+    MatchParen     { bg = blue, fg = dark_bg }, -- Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
     ModeMsg        { Normal, fg = Normal.fg.da(30), gui = "bold" }, -- 'showmode' message (e.g., "-- INSERT -- ")
     MsgArea        { Normal, fg = gray}, -- Area for messages and cmdline
     MsgSeparator   { bg = black, fg = normal.bg }, -- Separator for scrolled messages, `msgsep` flag of 'display'
@@ -133,14 +133,11 @@ local theme = lush(function(injected_functions)
     -- Boolean        { }, --   A boolean constant: TRUE, false
     -- Float          { }, --   A floating point constant: 2.3e10
 
-    Identifier     { Normal, fg = sat_green.li(20) }, -- (*) Any variable name
-    -- Function       { }, --   Function name (also: methods for classes)
-
     Statement      { Normal, fg = yellow.da(20).sa(20) }, -- (*) Any statement
     -- Conditional    { }, --   if, then, else, endif, switch, etc.
     -- Repeat         { }, --   for, do, while, etc.
     -- Label          { }, --   case, default, etc.
-    -- Operator       { }, --   "sizeof", "+", "*", etc.
+    Operator       { Statement, gui = "italic" }, --   "sizeof", "+", "*", etc.
     -- Keyword        { }, --   any other keyword
     -- Exception      { }, --   try, catch, throw
 
@@ -150,8 +147,11 @@ local theme = lush(function(injected_functions)
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    Type           { Statement }, -- (*) int, long, char, etc.
-    -- StorageClass   { }, --   static, register, volatile, etc.
+    Identifier     { Normal, fg = text.ro(-30).sa(20).da(20) }, -- (*) Any variable name
+    -- Function       { }, --   Function name (also: methods for classes)
+
+    Type           { Normal, fg = blue.sa(30).da(30), gui = "bold" }, -- (*) int, long, char, etc.
+    StorageClass   { Statement, gui = "bold" }, --   static, register, volatile, etc.
     -- Structure      { }, --   struct, union, enum, etc.
     -- Typedef        { }, --   A typedef
 
