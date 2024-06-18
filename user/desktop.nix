@@ -4,7 +4,7 @@
   imports = [
      ./common.nix
      ./hyprland/desktop.nix
-     ./waybar/desktop.nix
+     ./kitty/desktop.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
