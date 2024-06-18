@@ -29,24 +29,24 @@
       color9 = "#C84D4F";
 
       # green
-      color10 = "#1CD1AB";
-      color2 = "#1CD1AB";
+      color2 = "#7AE37C";
+      color10 = "#7AE37C";
 
       # yellow
       color3 = "#C7DC82";
       color11 = "#C7DC82";
 
       # blue
-      color4 = "#A3D3D3";
-      color12 = "#A3D3D3";
+      color4 = "#3ECED6";
+      color12 = "#3ECED6";
 
       # magenta
       color5 = "#BD5BB9";
       color13 = "#BD5BB9";
 
       # cyan
-      color6 = "#07e3b7";
-      color14 = "#07e3b7";
+      color6 = "#1CD1AB";
+      color14 = "#1CD1AB";
 
       # white
       color7 = "#E8FAED";
