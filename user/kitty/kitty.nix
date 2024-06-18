@@ -13,17 +13,17 @@
       tab_bar_style = "fade";
       tab_activity_symbol = "!";
       tab_title_template = "{fmt.fg.red}{bell_symbol}{activity_symbol}{fmt.fg.tab}{title} {num_windows}";
-    
+
       # custom theme maybe
       foreground = "#1CD1AB";
       background = "#14171A";
       selection_foreground = "#14171A";
       selection_background = "#1CD1AB";
-    
+
       # black
       color0 = "#14171A";
       color8 = "#877d81";
-      
+
       # red
       color1 = "#C84D4F";
       color9 = "#C84D4F";
@@ -52,8 +52,6 @@
       color7 = "#E8FAED";
       color15 = "#E8FAED";
     };
-    font.name = "JetBrains Mono";
-    font.size = 16;
     keybindings = {
       "kitty_mod+t" = "new_tab";
       "ctrl+tab" = "next_tab";

@@ -6,5 +6,8 @@
     ./kitty.nix
   ];
 
-  programs.kitty.settings.font.size = 16;
+  programs.kitty.font = {
+    name = "JetBrains Mono";
+    size = 16;
+  };
 }
