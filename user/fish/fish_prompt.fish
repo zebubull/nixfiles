@@ -30,6 +30,7 @@ function fish_prompt
 
     # Config options for fish_git_prompt
     set -g __fish_git_prompt_showupstream informative
+    set -g __fish_git_prompt_showdirtystate 1
 
     # Get the prompt text
     set -l git_prompt (fish_git_prompt '%s')
