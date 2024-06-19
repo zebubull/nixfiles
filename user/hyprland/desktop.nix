@@ -21,7 +21,6 @@
       # maybe it does but it didn't one time so make sure it does
       "systemctl --user restart pipewire.service"
       "systemctl --user restart pipewire-pulse.service"
-      "pactl load-module module-loopback"
       "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "xwaylandvideobridge"
       "fcitx5"
