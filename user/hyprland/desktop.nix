@@ -47,6 +47,10 @@
       touchpad.natural_scroll = "no";
       sensitivity = -0.1;
     };
+    device = {
+        name = "sony-computer-entertainment-wireless-controller-touchpad";
+        enabled = true;
+    };
     workspace = [
       "1,monitor:1,default:true"
       "2,monitor:0,default:true"

@@ -77,6 +77,7 @@
     ".local/bin/swww-randomize".source = ./swww-randomize;
     ".config/nvim".source = ../nvim;
     ".config/nvim-scheme".source = ../nvim-scheme;
+    ".config/pipewire/pipewire-pulse.conf.d/20-pulse-properties.conf".source = ./pipewire-pulse.conf;
   };
 
   home.sessionVariables = {
