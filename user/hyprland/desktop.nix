@@ -46,6 +46,7 @@
       follow_mouse = 0;
       touchpad.natural_scroll = "no";
       sensitivity = -0.1;
+      kb_options = "ctrl:nocaps";
     };
     device = {
         name = "sony-computer-entertainment-wireless-controller-touchpad";
