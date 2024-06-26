@@ -147,8 +147,8 @@ local theme = lush(function(injected_functions)
     -- Macro          { }, --   Same as Define
     -- PreCondit      { }, --   Preprocessor #if, #else, #endif, etc.
 
-    Identifier     { Normal, fg = text.ro(-30).sa(20).da(20) }, -- (*) Any variable name
-    -- Function       { }, --   Function name (also: methods for classes)
+    Identifier     { Normal, fg = text.ro(-30).sa(20).da(20), gui = "italic" }, -- (*) Any variable name
+    Function       { Normal, fg = text.ro(-30).sa(20).da(20), gui = "bold" }, --   Function name (also: methods for classes)
 
     Type           { Normal, fg = blue.sa(30).da(30), gui = "bold" }, -- (*) int, long, char, etc.
     StorageClass   { Statement, gui = "bold" }, --   static, register, volatile, etc.

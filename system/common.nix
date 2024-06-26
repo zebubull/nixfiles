@@ -233,6 +233,7 @@
     slurp
     ffmpeg
     discord
+    helvum
   ];
 
   #
