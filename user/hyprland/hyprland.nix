@@ -73,6 +73,7 @@
       "$mainMod, Q, exec, kitty"
       "$mainMod, C, killactive,"
       "$mainMod, M, exit,"
+      "$mainMod, g, fullscreen"
       "$mainMod SHIFT, V, togglefloating,"
       "$mainMod, R, exec, rofi -show drun"
       "$mainMod SHIFT, J, togglesplit,"
